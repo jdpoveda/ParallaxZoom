@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentSwipeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/storyDetailCollapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/storyDetailFragmentToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/leadAssetContainer"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_collapseMode="parallax"
+                android:background="@drawable/maxresdefault">
+
+            </RelativeLayout>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/storyDetailScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:overScrollMode="always"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/storyDetailNewsContent"
+            android:layout_width="match_parent"
+            android:layout_height="3000dp"
+            android:descendantFocusability="blocksDescendants"
+            android:focusableInTouchMode="true"
+            android:background="#67d767">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXX2"
+                android:layout_marginTop="140dp" />
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>
